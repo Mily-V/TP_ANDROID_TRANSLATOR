@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#efefef">
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:text="Translate text"
+        android:background="@drawable/button"
+        android:id="@+id/button_for_translate"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="#ff4b6564"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:text="Determine language"
+        android:background="@drawable/button"
+        android:id="@+id/button_for_determine"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="#ff4b6564"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:text="About product"
+        android:background="@drawable/button"
+        android:id="@+id/button_to_get_info"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="#ff4b6564"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

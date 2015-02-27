@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#efefef">
+
+    <Button
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:text="Click here to select original language"
+    android:background="@drawable/button"
+    android:id="@+id/button_for_original_lang_selection"
+    android:textSize="17sp"
+    android:textStyle="normal"
+    android:textColor="#ff405958"
+    android:gravity="center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:hint="Enter text"
+        android:background="@drawable/edittext"
+        android:id="@+id/edit_text_for_translate"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="#ff405958"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="35dp"
+        android:text=""
+        android:background="@drawable/translate"
+        android:id="@+id/button_start_translate"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="#ff405958"
+        android:gravity="center"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="7dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Click here to select final language"
+        android:background="@drawable/button"
+        android:id="@+id/button_for_final_lang_selection"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        android:textColor="#ff405958"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:hint="Translate result"
+            android:inputType="none"
+            android:background="@drawable/edittext"
+            android:id="@+id/edit_text_for_result"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="#ff405958"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"/>
+
+
+
+</LinearLayout>
