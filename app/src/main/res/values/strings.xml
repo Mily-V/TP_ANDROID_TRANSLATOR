@@ -2,16 +2,12 @@
 <resources>
 
     <string name="app_name">Translator</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="main_button_translate">Translate text</string>
     <string name="main_button_determine">Determine language</string>
     <string name="main_button_about">About product</string>
-    <string name="translate_button_select_origin">Click here to select original language</string>
-    <string name="translate_edit_text_origin">Enter text</string>
-    <string name="translate_button_translate">Translate</string>
-    <string name="translate_button_select_dest">Click here to select final language</string>
-    <string name="translate_edit_text_dest">Translate result</string>
+    <string name="translate_button_select_langs">Выберите словарь</string>
+    <string name="translate_edit_text_origin">Введите текст…</string>
+    <string name="translate_button_translate">Перевести</string>
     <string name="determine_edit_text_src">Enter text</string>
     <string name="determine_button_determine">Determine language</string>
     <string name="determine_edit_text_dest">Language is....</string>

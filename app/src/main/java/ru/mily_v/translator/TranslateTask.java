@@ -21,13 +21,17 @@ import java.util.List;
  */
 public class TranslateTask extends AsyncTask<String, Void, String> {
 
-	private final static String key = "trnsl.1.1.20150305T113444Z.109d980204fe813f.f5575b41e5e7f6681338678e1fb6be394baa5093";
+	private final String key = "trnsl.1.1.20150305T113444Z.109d980204fe813f" +
+			".f5575b41e5e7f6681338678e1fb6be394baa5093";
 	private String url = "https://translate.yandex.net/api/v1.5/tr.json/";
+	private String jsonFieldName = "";
+
 	private TranslateTaskListener callback;
 
-	public TranslateTask(TranslateTaskListener callback, String task) {
+	public TranslateTask(TranslateTaskListener callback, String task, String jsonFieldName) {
 		this.callback = callback;
 		url += task;
+		this.jsonFieldName = jsonFieldName;
 	}
 
 	@Override
@@ -63,7 +67,8 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 		try {
 			connection = (HttpURLConnection) new URL(url).openConnection();
 			connection.connect();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(connection.getInputStream(), "UTF-8"));
 			response = reader.readLine();
 			reader.close();
 		}
@@ -80,7 +85,7 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 
 	private String parseJSONResponse(String response) {
 		try {
-			response = new JSONObject(response).getJSONArray("text").getString(0);
+			response = new JSONObject(response).getJSONArray(jsonFieldName).getString(0);
 		}
 		catch (JSONException e) {
 			e.printStackTrace();

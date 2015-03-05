@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class TranslateActivity extends Activity implements TranslateTask.TranslateTaskListener {
 
-	public static final String EXTRA_EDIT_TEXT = "extra_edit_text_result";
+	public final String EXTRA_EDIT_TEXT = "extra_edit_text_result";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +20,22 @@ public class TranslateActivity extends Activity implements TranslateTask.Transla
 		translate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String origin = ((TextView) findViewById(R.id.translate_edit_text_origin)).getText().toString();
-				new TranslateTask(TranslateActivity.this, "translate").execute(origin, "en-ru");
+				String origin = ((TextView) findViewById(R.id.translate_edit_text_origin))
+						.getText().toString();
+				new TranslateTask(TranslateActivity.this, "translate", "text")
+						.execute(origin, "en-ru");
 			}
 		});
 
-		EditText editTextTranslateResult = (EditText) findViewById(R.id.translate_edit_text_origin);
-		editTextTranslateResult.setText(getIntent() != null ? getIntent().getStringExtra
-				(TranslateActivity.EXTRA_EDIT_TEXT) : "getIntent() == null");
-
+		EditText editTextTranslateResult =
+				(EditText) findViewById(R.id.translate_edit_text_origin);
+		editTextTranslateResult.setText(getIntent() != null
+				? getIntent().getStringExtra(EXTRA_EDIT_TEXT) : "getIntent() == null");
 	}
 
 	@Override
 	public void onPostExecute(String s) {
-		findViewById(R.id.translate_progress_bar_wait).setVisibility(View.INVISIBLE);
+		findViewById(R.id.translate_progress_bar_wait).setVisibility(View.GONE);
 		((TextView) findViewById(R.id.translate_edit_text_dest)).setText(s);
 	}
 
