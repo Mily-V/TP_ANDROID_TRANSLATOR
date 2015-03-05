@@ -7,7 +7,7 @@
     >
 
     <Button
-        android:id="@+id/button_for_translate"
+        android:id="@+id/main_button_translate"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
@@ -15,14 +15,14 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Translate text"
+        android:text="@string/main_button_translate"
         android:textColor="#ff4b6564"
         android:textSize="20sp"
         android:textStyle="normal"
         />
 
     <Button
-        android:id="@+id/button_for_determine"
+        android:id="@+id/determine_button_determine"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
@@ -31,14 +31,14 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Determine language"
+        android:text="@string/main_button_determine"
         android:textColor="#ff4b6564"
         android:textSize="20sp"
         android:textStyle="normal"
         />
 
     <Button
-        android:id="@+id/button_to_get_info"
+        android:id="@+id/main_button_about"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
@@ -47,7 +47,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="About product"
+        android:text="@string/main_button_about"
         android:textColor="#ff4b6564"
         android:textSize="20sp"
         android:textStyle="normal"

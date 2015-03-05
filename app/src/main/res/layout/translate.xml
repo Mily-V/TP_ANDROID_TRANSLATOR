@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -8,7 +7,7 @@
     >
 
     <Button
-        android:id="@+id/button_for_original_lang_selection"
+        android:id="@+id/translate_button_select_origin"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -16,21 +15,21 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Click here to select original language"
+        android:text="@string/translate_button_select_origin"
         android:textColor="#ff405958"
         android:textSize="17sp"
         android:textStyle="normal"
         />
 
     <EditText
-        android:id="@+id/edit_text_for_translate"
+        android:id="@+id/translate_edit_text_origin"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/edittext"
-        android:hint="Enter text"
+        android:hint="@string/translate_edit_text_origin"
         android:paddingLeft="5dp"
         android:textColor="#ff405958"
         android:textSize="16sp"
@@ -38,24 +37,23 @@
         />
 
     <Button
-        android:id="@+id/button_start_translate"
+        android:id="@+id/translate_button_translate"
         android:layout_width="170dp"
-        android:layout_height="35dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="7dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="7dp"
-        android:background="@drawable/translate"
         android:gravity="center"
-        android:text=""
+        android:text="@string/translate_button_translate"
         android:textColor="#ff405958"
         android:textSize="20sp"
         android:textStyle="normal"
         />
 
     <Button
-        android:id="@+id/button_for_final_lang_selection"
+        android:id="@+id/translate_button_select_dest"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -63,21 +61,21 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Click here to select final language"
+        android:text="@string/translate_button_select_dest"
         android:textColor="#ff405958"
         android:textSize="17sp"
         android:textStyle="normal"
         />
 
     <EditText
-        android:id="@+id/edit_text_for_result"
+        android:id="@+id/translate_edit_text_dest"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/edittext"
-        android:hint="Translate result"
+        android:hint="@string/translate_edit_text_dest"
         android:inputType="none"
         android:paddingLeft="5dp"
         android:textColor="#ff405958"
@@ -86,10 +84,9 @@
         />
 
     <ProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/translate_progress_bar_wait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:indeterminate="true"
         android:visibility="invisible"
         />

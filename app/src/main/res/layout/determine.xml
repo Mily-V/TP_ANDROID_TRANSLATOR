@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -8,14 +7,14 @@
     >
 
     <EditText
-        android:id="@+id/edit_text_for_determine"
+        android:id="@+id/determine_edit_text_src"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/edittext_determine"
-        android:hint="Enter text"
+        android:hint="@string/determine_edit_text_src"
         android:paddingLeft="5dp"
         android:textColor="#ff405958"
         android:textSize="16sp"
@@ -23,7 +22,7 @@
         />
 
     <Button
-        android:id="@+id/button_for_determine"
+        android:id="@+id/determine_button_determine"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -31,14 +30,14 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Determine language"
+        android:text="@string/determine_button_determine"
         android:textColor="#ff405958"
         android:textSize="20sp"
         android:textStyle="normal"
         />
 
     <EditText
-        android:id="@+id/edit_text_for_determination_result"
+        android:id="@+id/determine_edit_text_dest"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -47,7 +46,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:hint="Language is...."
+        android:hint="@string/determine_edit_text_dest"
         android:paddingLeft="5dp"
         android:textColor="#ff405958"
         android:textSize="24sp"
@@ -55,7 +54,7 @@
         />
 
     <Button
-        android:id="@+id/button_start_translate"
+        android:id="@+id/determine_button_translate"
         android:layout_width="170dp"
         android:layout_height="35dp"
         android:layout_gravity="center_horizontal"

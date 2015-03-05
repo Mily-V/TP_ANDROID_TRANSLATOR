@@ -17,10 +17,10 @@ public class DetermineActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.determine);
-		editTextForDetermine = (EditText) findViewById(R.id.edit_text_for_determine);
-		editTextForTranslate = (EditText) findViewById(R.id.edit_text_for_translate);
+		editTextForDetermine = (EditText) findViewById(R.id.determine_edit_text_src);
+		editTextForTranslate = (EditText) findViewById(R.id.translate_edit_text_origin);
 
-		final Button goToTranslateActivity = (Button) findViewById(R.id.button_start_translate);
+		final Button goToTranslateActivity = (Button) findViewById(R.id.determine_button_translate);
 		goToTranslateActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -29,26 +29,5 @@ public class DetermineActivity extends Activity {
 				startActivity(i);
 			}
 		});
-
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	protected void onStop() {
-		super.onStop();
-	}
-
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
 	}
 }

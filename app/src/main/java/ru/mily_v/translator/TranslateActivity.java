@@ -21,8 +21,8 @@ public class TranslateActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.translate);
 
-		final Button translate = (Button) findViewById(R.id.button_start_translate);
-		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+		final Button translate = (Button) findViewById(R.id.translate_button_translate);
+		progressBar = (ProgressBar) findViewById(R.id.translate_progress_bar_wait);
 		translate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -31,7 +31,7 @@ public class TranslateActivity extends Activity {
 			}
 		});
 
-		editTextTranslateResult = (EditText) findViewById(R.id.edit_text_for_translate);
+		editTextTranslateResult = (EditText) findViewById(R.id.translate_edit_text_origin);
 		editTextTranslateResult.setText(getIntent() != null ? getIntent().getStringExtra
 				(TranslateActivity.EXTRA_EDIT_TEXT) : "getIntent() == null");
 
@@ -74,7 +74,7 @@ public class TranslateActivity extends Activity {
 
 		@Override
 		protected void onPostExecute(Void aVoid) {
-			editTextTranslateResult = (EditText) findViewById(R.id.edit_text_for_result);
+			editTextTranslateResult = (EditText) findViewById(R.id.translate_edit_text_dest);
 			editTextTranslateResult.setText("Типа переведенный текст");
 			progressBar.setVisibility(View.INVISIBLE);
 		}

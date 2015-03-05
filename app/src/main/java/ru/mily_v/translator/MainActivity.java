@@ -3,8 +3,6 @@ package ru.mily_v.translator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,7 +13,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		final Button startTranslateActivity = (Button) findViewById(R.id.button_for_translate);
+		final Button startTranslateActivity = (Button) findViewById(R.id.main_button_translate);
 		startTranslateActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -24,7 +22,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		final Button startDetermineActivity = (Button) findViewById(R.id.button_for_determine);
+		final Button startDetermineActivity = (Button) findViewById(R.id.determine_button_determine);
 		startDetermineActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -33,7 +31,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		final Button startAboutActivity = (Button) findViewById(R.id.button_to_get_info);
+		final Button startAboutActivity = (Button) findViewById(R.id.main_button_about);
 		startAboutActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -41,43 +39,5 @@ public class MainActivity extends Activity {
 				startActivity(i);
 			}
 		});
-
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	protected void onStop() {
-		super.onStop();
-	}
-
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-	}
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.menu_main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
 	}
 }
