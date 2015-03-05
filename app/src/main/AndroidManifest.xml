@@ -22,7 +22,6 @@
         </activity>
         <activity android:name=".TranslateActivity"/>
         <activity android:name=".DetermineActivity"/>
-        <activity android:name=".AboutActivity"/>
     </application>
 
 </manifest>

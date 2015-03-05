@@ -1,56 +1,76 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#efefef"
-              android:gravity="center"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     >
 
-    <Button
-        android:id="@+id/button_for_translate"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/button"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
         android:gravity="center"
-        android:text="Translate text"
-        android:textColor="#ff4b6564"
-        android:textSize="20sp"
-        android:textStyle="normal"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/button_for_translate"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Translate text"
+            android:textColor="#ff4b6564"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:focusable="false"
+            />
+
+        <Button
+            android:id="@+id/button_for_determine"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Determine language"
+            android:textColor="#ff4b6564"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:focusable="false"
+            />
+
+        <Button
+            android:id="@+id/button_to_get_info"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Authors"
+            android:textColor="#ff4b6564"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:focusable="false"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fragment_authors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
         />
 
-    <Button
-        android:id="@+id/button_for_determine"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="Determine language"
-        android:textColor="#ff4b6564"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        />
-
-    <Button
-        android:id="@+id/button_to_get_info"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="About product"
-        android:textColor="#ff4b6564"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        />
-
-</LinearLayout>
+</RelativeLayout>

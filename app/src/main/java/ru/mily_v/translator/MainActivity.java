@@ -1,14 +1,18 @@
 package ru.mily_v.translator;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+import ru.mily_v.translator.fragments.AuthorsFragment;
+
+public class MainActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +37,16 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		final Button startAboutActivity = (Button) findViewById(R.id.button_to_get_info);
-		startAboutActivity.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this, AboutActivity.class);
-				startActivity(i);
+        final Button startAuthorsActivity = (Button) findViewById(R.id.button_to_get_info);
+        startAuthorsActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AuthorsFragment authorsNameFragment = new AuthorsFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.add(R.id.main_fragment_authors, authorsNameFragment);
+                transaction.commit();
 			}
 		});
 
