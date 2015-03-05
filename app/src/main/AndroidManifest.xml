@@ -24,5 +24,5 @@
         <activity android:name=".DetermineActivity"/>
         <activity android:name=".AboutActivity"/>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
