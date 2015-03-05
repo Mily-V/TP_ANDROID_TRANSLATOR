@@ -3,16 +3,16 @@ package ru.mily_v.translator;
 import android.os.AsyncTask;
 
 import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,6 +32,11 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 
 	@Override
 	protected String doInBackground(String... params) {
+		setRequestParams(params);
+		return doRequest();
+	}
+
+	private void setRequestParams(String[] params) {
 		List<NameValuePair> getParams = new LinkedList<>();
 
 		getParams.add(new BasicNameValuePair("key", key));
@@ -44,8 +49,6 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 
 		url += '?';
 		url += URLEncodedUtils.format(getParams, "utf-8");
-
-		return doRequest();
 	}
 
 	private String doRequest() {
@@ -56,13 +59,21 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 	}
 
 	private String httpRequest(String response) {
-		HttpClient httpClient = new DefaultHttpClient();
-		HttpGet httpGet = new HttpGet(url);
+		HttpURLConnection connection = null;
 		try {
-			response = EntityUtils.toString(httpClient.execute(httpGet).getEntity());
+			connection = (HttpURLConnection) new URL(url).openConnection();
+			connection.connect();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
+			response = reader.readLine();
+			reader.close();
 		}
 		catch (IOException e) {
 			e.printStackTrace();
+		}
+		finally {
+			if (connection != null) {
+				connection.disconnect();
+			}
 		}
 		return response;
 	}
