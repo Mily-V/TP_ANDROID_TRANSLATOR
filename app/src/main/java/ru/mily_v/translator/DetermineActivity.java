@@ -17,10 +17,10 @@ public class DetermineActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.determine);
-		editTextForDetermine = (EditText) findViewById(R.id.edit_text_for_determine);
-		editTextForTranslate = (EditText) findViewById(R.id.edit_text_for_translate);
+		editTextForDetermine = (EditText) findViewById(R.id.determine_edit_text_for_determine);
+		editTextForTranslate = (EditText) findViewById(R.id.determine_edit_text_for_translate);
 
-		final Button goToTranslateActivity = (Button) findViewById(R.id.button_start_translate);
+		final Button goToTranslateActivity = (Button) findViewById(R.id.determine_button_start_translate);
 		goToTranslateActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

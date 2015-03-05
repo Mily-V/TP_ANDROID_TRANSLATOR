@@ -15,7 +15,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="7dp"
         android:gravity="center"
-        android:text="Волынец Эмилия, Титаевский Сергей  и Гречкин-Погребняков Сергей"
+        android:text="@string/authors_fragment_names_list"
         android:textColor="#194949"
         android:textSize="23sp"
         android:textStyle="bold"

@@ -2,7 +2,16 @@
 <resources>
 
     <string name="app_name">Translator</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="authors_fragment_names_list">Волынец Эмилия, Титаевский Сергей  и Гречкин-Погребняков Сергей</string>
+    <string name="main_button_translate">Translate text</string>
+    <string name="main_button_determine">Determine language</string>
+    <string name="main_button_authors">Authors</string>
+    <string name="translate_button_select_origin_lang">Click here to select original language</string>
+    <string name="translate_edit_text_for_translate">Enter text</string>
+    <string name="translate_button_select_final_lang">Click here to select final language</string>
+    <string name="translate_edit_text_for_result">Translate result</string>
+    <string name="determine_edit_text">Enter text</string>
+    <string name="determine_button">Determine language</string>
+    <string name="determine_edit_text_result">Language is....</string>
 
 </resources>

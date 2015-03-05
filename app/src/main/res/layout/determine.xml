@@ -8,22 +8,23 @@
     >
 
     <EditText
-        android:id="@+id/edit_text_for_determine"
+        android:id="@+id/determine_edit_text_for_determine"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/edittext_determine"
-        android:hint="Enter text"
+        android:hint="@string/determine_edit_text"
         android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="#ff405958"
         android:textSize="16sp"
         android:textStyle="normal"
         />
 
     <Button
-        android:id="@+id/button_for_determine"
+        android:id="@+id/determine_button_for_determine"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -31,14 +32,14 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="Determine language"
+        android:text="@string/determine_button"
         android:textColor="#ff405958"
         android:textSize="20sp"
         android:textStyle="normal"
         />
 
     <EditText
-        android:id="@+id/edit_text_for_determination_result"
+        android:id="@+id/determine_edit_text_for_determination_result"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -47,15 +48,16 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:hint="Language is...."
+        android:hint="@string/determine_edit_text_result"
         android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="#ff405958"
         android:textSize="24sp"
         android:textStyle="normal"
         />
 
     <Button
-        android:id="@+id/button_start_translate"
+        android:id="@+id/determine_button_start_translate"
         android:layout_width="170dp"
         android:layout_height="35dp"
         android:layout_gravity="center_horizontal"

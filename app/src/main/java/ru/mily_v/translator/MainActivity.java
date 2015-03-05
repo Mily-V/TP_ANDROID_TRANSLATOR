@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,7 +17,7 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		final Button startTranslateActivity = (Button) findViewById(R.id.button_for_translate);
+		final Button startTranslateActivity = (Button) findViewById(R.id.main_button_for_translate);
 		startTranslateActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -28,7 +26,7 @@ public class MainActivity extends FragmentActivity {
 			}
 		});
 
-		final Button startDetermineActivity = (Button) findViewById(R.id.button_for_determine);
+		final Button startDetermineActivity = (Button) findViewById(R.id.main_button_for_determine);
 		startDetermineActivity.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -37,7 +35,7 @@ public class MainActivity extends FragmentActivity {
 			}
 		});
 
-        final Button startAuthorsActivity = (Button) findViewById(R.id.button_to_get_info);
+        final Button startAuthorsActivity = (Button) findViewById(R.id.main_button_authors);
         startAuthorsActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,20 +70,4 @@ public class MainActivity extends FragmentActivity {
 		super.onDestroy();
 	}
 
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.menu_main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
-	}
 }
