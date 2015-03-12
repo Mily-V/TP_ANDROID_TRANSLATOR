@@ -4,6 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -23,6 +25,6 @@
         <activity android:name=".TranslateActivity"/>
         <activity android:name=".DetermineActivity"/>
         <activity android:name=".AboutActivity"/>
+        <activity android:name=".DictionarySelectActivity"/>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

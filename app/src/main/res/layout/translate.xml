@@ -4,7 +4,7 @@
     >
 
     <Button
-        android:id="@+id/translate_button_select_langs"
+        android:id="@+id/translate_button_select_dictionary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -24,7 +24,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/translate_button_select_langs"
+        android:layout_below="@+id/translate_button_select_dictionary"
         android:inputType="textMultiLine"
         android:text="@string/translate_edit_text_origin"
         />

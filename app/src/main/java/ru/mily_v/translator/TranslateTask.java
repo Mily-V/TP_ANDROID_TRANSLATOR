@@ -19,23 +19,21 @@ import java.util.List;
 /**
  * author s.titaevskiy on 05.03.15.
  */
-public class TranslateTask extends AsyncTask<String, Void, String> {
+public class TranslateTask extends AsyncTask<String, Void, JSONObject> {
 
 	private final String key = "trnsl.1.1.20150305T113444Z.109d980204fe813f" +
 			".f5575b41e5e7f6681338678e1fb6be394baa5093";
 	private String url = "https://translate.yandex.net/api/v1.5/tr.json/";
-	private String jsonFieldName = "";
 
 	private TranslateTaskListener callback;
 
-	public TranslateTask(TranslateTaskListener callback, String task, String jsonFieldName) {
+	public TranslateTask(TranslateTaskListener callback, String task) {
 		this.callback = callback;
 		url += task;
-		this.jsonFieldName = jsonFieldName;
 	}
 
 	@Override
-	protected String doInBackground(String... params) {
+	protected JSONObject doInBackground(String... params) {
 		setRequestParams(params);
 		return doRequest();
 	}
@@ -55,11 +53,17 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 		url += URLEncodedUtils.format(getParams, "utf-8");
 	}
 
-	private String doRequest() {
+	private JSONObject doRequest() {
 		String response = "";
 		response = httpRequest(response);
-		response = parseJSONResponse(response);
-		return response;
+		JSONObject jsonResponse = null;
+		try {
+			jsonResponse = new JSONObject(response);
+		}
+		catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return jsonResponse;
 	}
 
 	private String httpRequest(String response) {
@@ -83,16 +87,6 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 		return response;
 	}
 
-	private String parseJSONResponse(String response) {
-		try {
-			response = new JSONObject(response).getJSONArray(jsonFieldName).getString(0);
-		}
-		catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return response;
-	}
-
 	@Override
 	protected void onPreExecute() {
 		super.onPreExecute();
@@ -100,13 +94,13 @@ public class TranslateTask extends AsyncTask<String, Void, String> {
 	}
 
 	@Override
-	protected void onPostExecute(String s) {
-		super.onPostExecute(s);
-		callback.onPostExecute(s);
+	protected void onPostExecute(JSONObject json) {
+		super.onPostExecute(json);
+		callback.onPostExecute(json);
 	}
 
 	public interface TranslateTaskListener {
-		public void onPostExecute(String s);
+		public void onPostExecute(JSONObject json);
 
 		public void onPreExecute();
 	}
